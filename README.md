@@ -6,5 +6,5 @@ A Flask application is a Python script that imports the Flask module, creates an
 NOTE: It is mostly recommended to create a Python virtual environment to isolate your flask application.
 Once Flask is installed, you can start building your web application. To do this, create a new Python script and import the Flask module.
 
-# REQUIRMENT FILE:
+# REQUIREMENT FILE:
 The requirements.txt file is the file that captures the current state of installed packages in your Python virtual environment. This file is often shared with others to replicate the environment or used for deployment purposes. It can be generated using the command 'pip freeze > requirements.txt'
