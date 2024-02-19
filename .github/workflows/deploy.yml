@@ -19,6 +19,6 @@ jobs:
       run: docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
 
     - name: Build docker image
-      run: docker build -t devaltruist/betakopa .
+      run: docker build -t devaltruist/betakopa-main .
     - name: Push to docker
-      run: docker push devaltruist/betakopa:latest
+      run: docker push devaltruist/betakopa-main:latest
