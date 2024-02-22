@@ -39,7 +39,7 @@ echo "Displaying logs for the Flask application..."
 pm2 logs flask-app
 
 
-#To stop application, type:
+#To stop application after running, type:
 #"pm2 stop flask-app"
 #To restart the application, type:
 #"pm2 restart flask-app"
