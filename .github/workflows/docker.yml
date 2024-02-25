@@ -22,6 +22,6 @@ jobs:
       run: docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
 
     - name: Build docker image
-      run: docker build -t ${DOCKER_USERNAME}/betakopa-main --build-arg PM2_PUBLIC_KEY=${PM2_PUBLIC_KEY} --build-arg PM2_SECRET_KEY=${PM2_SECRET_KEY} --build-arg PM2_MACHINE_NAME=${PM2_MACHINE_NAME} .
+      run: docker build -t ${DOCKER_USERNAME}/betakopa-project --build-arg PM2_PUBLIC_KEY=${PM2_PUBLIC_KEY} --build-arg PM2_SECRET_KEY=${PM2_SECRET_KEY} --build-arg PM2_MACHINE_NAME=${PM2_MACHINE_NAME} .
     - name: Push to docker
-      run: docker push ${DOCKER_USERNAME}/betakopa-main:latest
+      run: docker push ${DOCKER_USERNAME}/betakopa-project:latest

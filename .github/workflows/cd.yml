@@ -31,9 +31,9 @@ jobs:
       run: |
         ssh -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa $INSTANCE_IP \
         '
-        sudo docker pull $DOCKER_USERNAME/betakopa-main:latest \
-        && sudo docker stop betakopa-main-container || true \
-        && sudo docker rm betakopa-main-container || true \
-        && sudo docker run -d --name betakopa-main-container -p 5000:5000 $DOCKER_USERNAME/betakopa-main:latest
+        sudo docker pull $DOCKER_USERNAME/betakopa-project:latest \
+        && sudo docker stop betakopa-project-container || true \
+        && sudo docker rm betakopa-project-container || true \
+        && sudo docker run -d --name betakopa-project-container -p 5000:5000 $DOCKER_USERNAME/betakopa-project:latest
         '
     
