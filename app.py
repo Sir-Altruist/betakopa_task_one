@@ -10,7 +10,12 @@ def hello_world():
     # Return the string "Hello, World!" when the route is accessed
     return 'Hello, World!'
 
+@app.route('/custom')
+def custom():
+    # Return the string "Hello, World!" when the route is accessed
+    return 'Hello, Custom!'
+
 # Check if the script is executed directly (not imported)
 if __name__ == "__main__":
     # Run the Flask app
-    app.run()
+    app.run(host="0.0.0.0", port=5000, debug=True, threaded=True)
