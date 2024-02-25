@@ -29,6 +29,6 @@ jobs:
         INSTANCE_IP: ${{ secrets.INSTANCE_IP }}
         DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
       run: |
-        ssh -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa $INSTANCE_IP 'sudo docker pull devaltruist/betakopa-project:latest && sudo docker run -d --name betakopa-project-container -p 5000:5000 devaltruist/betakopa-project:latest'
-      
+        ssh -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa $INSTANCE_IP 'sudo docker pull devaltruist/betakopa-project:latest && sudo docker stop betakopa-project-container || true && sudo docker rm betakopa-project-container || true && sudo docker run -d --name betakopa-project-container -p 5000:5000 devaltruist/betakopa-project:latest'
+        
     
